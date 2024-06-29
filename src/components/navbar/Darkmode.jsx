@@ -28,6 +28,7 @@ function Darkmode() {
       {
         options?.map((opt)=>(
           <button key = {opt.text}
+          role="link"
           onClick={()=> setTheme(opt.text)}
           className={`w-8 h-8 leading-9 text-xl rounded-full m-1 ${theme === opt.text && "text-pink-600"}`}>
           <ion-icon name={opt.icon}></ion-icon>

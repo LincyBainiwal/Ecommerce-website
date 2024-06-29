@@ -1,12 +1,14 @@
 import React from 'react'
 import {IoMdSearch} from "react-icons/io"
-import {FaCaretDown, FaCartShopping} from "react-icons/fa6"
+import { FaCartShopping} from "react-icons/fa6"
 import Logo from '../img/Logo.svg'
 import DarkMode from "../navbar/Darkmode"
-import {Menu} from '../data/menu'
-import { DropdownLinks } from '../data/DropdownLinks'
-function Navbar() {
+import Navigation from "../navbar/Navigation"
 
+
+
+
+function Navbar() { 
   return (
     <div className="shadow-md bg-white dark:bg-black dark:text-white duration-200 relative z-40">
       {/* upper Navbar */}
@@ -35,38 +37,14 @@ function Navbar() {
             < DarkMode/>
            </div>
            </div>
+           
         </div>
+        
       </div>
-      {/* lower Navbar */}
-      <div className="flex justify-center h-10">
-    <ul className="sm:flex hidden items-center gap-4">
-         {Menu.map((data) =>(
-         <li key={data.id}>
-          <a href={data.link} className="inline-block text-1.5xl  px-4 hover:text-pink-500 duration-200 ">{data.name}</a>
-         </li>
-          ))}
-          <li className="group relative cursor-pointer">
-            <a href="#" className="flex items-center gap-[2px] py-2 ">
-              Trending
-              <span>
-                <FaCaretDown className="transition-all duration-200 group-hover:rotate-180"/>
-              </span>
-              </a>
-              <div className="absolute z-[9999]  hidden group-hover:block w-[200px]  rounded-md bg-white p-3 text-black shadow-md">
-                <ul>
-                {DropdownLinks.map((data) =>(
-                <li key={data.id}>
-                  <a href={data.link} className="inline-block w-full rounded-md p-2 hover:bg-primary/20">{data.name}</a>
-                </li>
-                ))}
-                </ul>
-              </div>
-              </li>          
-</ul>
+      <div>
+            <Navigation/>
+           </div>
       </div>
-    </div>
-  )
-  
-}
-
-export default Navbar
+    )
+    }
+    export default Navbar
