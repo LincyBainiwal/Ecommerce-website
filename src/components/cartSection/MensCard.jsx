@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { mensWearData } from './mensWearData'
 const MensCard = ({product}) => {
   return (
     <div className='cursor-pointer flex flex-col items-center rounded-lg shadow-lg overflow-hidden w-[15rem] mx-3 border border-pink-500 hover:bg-primary'>
